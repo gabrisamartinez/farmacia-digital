@@ -1,16 +1,19 @@
 package mocks;
 
-import com.zupedu.bancodigital.domain.Propose;
+import domains.Medicine;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class ProposeMock {
-	public static Propose create() {
-		return new Propose()
-		  .setAddress(AddressMock.create())
-		  .setCompleteName("Gabrielly Gomes Martinez")
-		  .setCpf("444.444.444-44")
-		  .setEmail("gabrielly.martinez@zup.com.br");
+public class MedicineMock {
+	public static Medicine create() {
+		return new Medicine()
+		  .setPharmaceutical(PharmaceuticalMock.create())
+		  .setName("Penincilina")
+		  .setCategoryName("Antibióticos")
+		  .setManufacturingDate(new Date())
+		  .setValidateDate(new Date());
 	}
 }

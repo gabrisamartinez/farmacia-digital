@@ -6,12 +6,10 @@ import domains.Medicine;
 import mocks.MedicineMock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import ports.services.RegisterMedicineService;
 
 import javax.validation.ValidationException;
 
-@SpringBootTest
 public class CreateMedicineServiceTest {
 
 	private final RegisterMedicineService registerMedicineService = new RegisterMedicineServiceImpl(new MockMedicineRepository());
